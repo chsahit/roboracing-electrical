@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.1.0">
+<eagle version="8.1.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -14134,41 +14134,38 @@ Source: http://cache.national.com/ds/LM/LM340.pdf</description>
 </net>
 <net name="SCK_3V3" class="0">
 <segment>
-<wire x1="38.1" y1="7.62" x2="58.42" y2="7.62" width="0.1524" layer="91"/>
-<label x="58.42" y="7.62" size="1.778" layer="95" xref="yes"/>
-</segment>
-<segment>
 <pinref part="U3" gate="G$1" pin="SCK"/>
 <wire x1="-10.16" y1="63.5" x2="-12.7" y2="63.5" width="0.1524" layer="91"/>
 <label x="-12.7" y="63.5" size="1.778" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U8" gate="G$1" pin="PA4(PCINT4/ADC4/AIN11/TOCC3/T1/RXD1/SCL/SCK)"/>
+<wire x1="38.1" y1="7.62" x2="48.26" y2="7.62" width="0.1524" layer="91"/>
+<label x="48.26" y="7.62" size="1.778" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="MISO_3V3" class="0">
-<segment>
-<wire x1="38.1" y1="2.54" x2="45.72" y2="2.54" width="0.1524" layer="91"/>
-<label x="45.72" y="2.54" size="1.778" layer="95" xref="yes"/>
-</segment>
 <segment>
 <pinref part="U3" gate="G$1" pin="MISO"/>
 <wire x1="-10.16" y1="68.58" x2="-12.7" y2="68.58" width="0.1524" layer="91"/>
 <label x="-12.7" y="68.58" size="1.778" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U8" gate="G$1" pin="PA5(PCINT5/ADC5/ACO0/TOCC4/T2/TXD1/MISO)"/>
+<wire x1="38.1" y1="2.54" x2="48.26" y2="2.54" width="0.1524" layer="91"/>
+<label x="48.26" y="2.54" size="1.778" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="MOSI_3V3" class="0">
-<segment>
-<wire x1="38.1" y1="-2.54" x2="45.72" y2="-2.54" width="0.1524" layer="91"/>
-<label x="45.72" y="-2.54" size="1.778" layer="95" xref="yes"/>
-</segment>
 <segment>
 <pinref part="U3" gate="G$1" pin="MOSI"/>
 <wire x1="-10.16" y1="66.04" x2="-30.48" y2="66.04" width="0.1524" layer="91"/>
 <label x="-30.48" y="66.04" size="1.778" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
-</net>
-<net name="NSS_3V3" class="0">
 <segment>
-<wire x1="38.1" y1="-7.62" x2="45.72" y2="-7.62" width="0.1524" layer="91"/>
-<label x="45.72" y="-7.62" size="1.778" layer="95" xref="yes"/>
+<pinref part="U8" gate="G$1" pin="PA6(PCINT6/ADC6/ACO1/TOCC5/XCK1/SDA/MOSI)"/>
+<wire x1="38.1" y1="-2.54" x2="48.26" y2="-2.54" width="0.1524" layer="91"/>
+<label x="48.26" y="-2.54" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="ESTOP_3V3" class="0">
@@ -14220,13 +14217,6 @@ Source: http://cache.national.com/ds/LM/LM340.pdf</description>
 <pinref part="TRAXXAS_ESC_PWR" gate="G$1" pin="+"/>
 <pinref part="SUPPLY4" gate="G$1" pin="VCC"/>
 <wire x1="175.26" y1="15.24" x2="175.26" y2="25.4" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="NSS_3P3V" class="0">
-<segment>
-<pinref part="U3" gate="G$1" pin="NSS"/>
-<wire x1="-10.16" y1="60.96" x2="-30.48" y2="60.96" width="0.1524" layer="91"/>
-<label x="-30.48" y="60.96" size="1.778" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="DIO0_3V3" class="0">
@@ -14321,6 +14311,18 @@ Source: http://cache.national.com/ds/LM/LM340.pdf</description>
 <wire x1="-40.64" y1="25.4" x2="-40.64" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="U8" gate="G$1" pin="VCC"/>
 <wire x1="-40.64" y1="20.32" x2="-38.1" y2="20.32" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="NSS_3V3" class="0">
+<segment>
+<pinref part="U8" gate="G$1" pin="PA7(PCINT7/ADC7/TOCC6/ICP1/TXD0/SS')"/>
+<wire x1="38.1" y1="-7.62" x2="48.26" y2="-7.62" width="0.1524" layer="91"/>
+<label x="48.26" y="-7.62" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U3" gate="G$1" pin="NSS"/>
+<wire x1="-10.16" y1="60.96" x2="-30.48" y2="60.96" width="0.1524" layer="91"/>
+<label x="-30.48" y="60.96" size="1.778" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
