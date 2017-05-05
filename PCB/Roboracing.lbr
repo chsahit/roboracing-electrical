@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -2158,6 +2158,33 @@ Source: http://focus.ti.com/lit/ds/symlink/tlc27l2.pdf</description>
 <wire x1="0.3048" y1="3.302" x2="-0.3048" y2="3.302" width="0.1524" layer="51" curve="-180"/>
 <text x="-2.4384" y="1.9558" size="1.27" layer="51" ratio="6" rot="SR0">*</text>
 </package>
+<package name="48406-0003">
+<pad name="LEG3" x="0" y="-13.14" drill="2.3"/>
+<pad name="LEG2" x="5.68" y="0" drill="2.3"/>
+<pad name="LEG4" x="5.68" y="-13.14" drill="2.3"/>
+<pad name="LEG1" x="0" y="0" drill="2.3"/>
+<pad name="STDA_SSTX-2" x="6.7" y="-4.57" drill="0.7"/>
+<pad name="STDA_SSTX+2" x="6.7" y="-2.57" drill="0.7"/>
+<pad name="STDA_SSRX+2" x="6.7" y="-8.57" drill="0.7"/>
+<pad name="GND_DRAIN2" x="6.7" y="-6.57" drill="0.7"/>
+<pad name="D+2" x="5.2" y="-7.57" drill="0.7"/>
+<pad name="STDA_SSTX+1" x="3.5" y="-2.57" drill="0.7"/>
+<pad name="STDA_SSRX-2" x="6.7" y="-10.57" drill="0.7"/>
+<pad name="D-2" x="5.2" y="-5.57" drill="0.7"/>
+<pad name="GND_DRAIN1" x="3.5" y="-6.57" drill="0.7"/>
+<pad name="GND2" x="5.2" y="-10.07" drill="0.7"/>
+<pad name="STDA_SSRX+1" x="3.5" y="-8.57" drill="0.7"/>
+<pad name="STDA_SSTX-1" x="3.5" y="-4.57" drill="0.7"/>
+<pad name="VBUS2" x="5.2" y="-3.07" drill="0.7"/>
+<pad name="D-1" x="2" y="-5.57" drill="0.7"/>
+<pad name="D+1" x="2" y="-7.57" drill="0.7"/>
+<pad name="VBUS1" x="2" y="-3.07" drill="0.7"/>
+<pad name="GND1" x="2" y="-10.07" drill="0.7"/>
+<pad name="STDA_SSRX-1" x="3.5" y="-10.57" drill="0.7"/>
+<wire x1="0" y1="0" x2="-9.44" y2="0" width="0.127" layer="48"/>
+<wire x1="-9.44" y1="0" x2="-9.44" y2="-13.14" width="0.127" layer="48"/>
+<wire x1="-9.44" y1="-13.14" x2="0" y2="-13.14" width="0.127" layer="48"/>
+</package>
 </packages>
 <symbols>
 <symbol name="PINHD3">
@@ -3470,6 +3497,39 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <attribute name="MANUFACTURER_PART_NUMBER" value="TXB0108PWR" constant="no"/>
 <attribute name="VENDOR" value="Texas Instruments" constant="no"/>
 </technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="USB3-TYPEA">
+<gates>
+<gate name="G$1" symbol="USB3_TYPE_A" x="7.62" y="-7.62"/>
+<gate name="G$2" symbol="USB3_TYPE_A" x="-22.86" y="-7.62"/>
+</gates>
+<devices>
+<device name="" package="48406-0003">
+<connects>
+<connect gate="G$1" pin="D+" pad="D+1"/>
+<connect gate="G$1" pin="D-" pad="D-1"/>
+<connect gate="G$1" pin="GND" pad="GND1"/>
+<connect gate="G$1" pin="GND_DRAIN" pad="LEG1 LEG2 LEG3 LEG4"/>
+<connect gate="G$1" pin="STDA_SSRX+" pad="STDA_SSRX+1"/>
+<connect gate="G$1" pin="STDA_SSRX-" pad="STDA_SSRX-1"/>
+<connect gate="G$1" pin="STDA_SSTX+" pad="STDA_SSTX+1"/>
+<connect gate="G$1" pin="STDA_SSTX-" pad="STDA_SSTX-1"/>
+<connect gate="G$1" pin="VBUS" pad="VBUS1"/>
+<connect gate="G$2" pin="D+" pad="D+2"/>
+<connect gate="G$2" pin="D-" pad="D-2"/>
+<connect gate="G$2" pin="GND" pad="GND2"/>
+<connect gate="G$2" pin="GND_DRAIN" pad="GND_DRAIN1 GND_DRAIN2"/>
+<connect gate="G$2" pin="STDA_SSRX+" pad="STDA_SSRX+2"/>
+<connect gate="G$2" pin="STDA_SSRX-" pad="STDA_SSRX-2"/>
+<connect gate="G$2" pin="STDA_SSTX+" pad="STDA_SSTX+2"/>
+<connect gate="G$2" pin="STDA_SSTX-" pad="STDA_SSTX-2"/>
+<connect gate="G$2" pin="VBUS" pad="VBUS2"/>
+</connects>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>

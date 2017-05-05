@@ -10517,8 +10517,8 @@ Source: http://cache.national.com/ds/LM/LM340.pdf</description>
 <part name="R29" library="rcl" deviceset="R-US_" device="R0603" value="4.7k"/>
 <part name="GND28" library="supply1" deviceset="GND" device=""/>
 <part name="C11" library="rcl" deviceset="C-US" device="C0603" value="1.0uF"/>
-<part name="C8" library="rcl" deviceset="C-US" device="C0603" value="0.1uF"/>
-<part name="C9" library="rcl" deviceset="C-US" device="C0603" value="0.1uF"/>
+<part name="C8" library="rcl" deviceset="C-US" device="C0402" value="0.1uF"/>
+<part name="C9" library="rcl" deviceset="C-US" device="C0402" value="0.1uF"/>
 <part name="GND26" library="supply1" deviceset="GND" device=""/>
 <part name="R28" library="rcl" deviceset="R-US_" device="R0603" value="9.53k"/>
 <part name="R23" library="rcl" deviceset="R-US_" device="R0603" value="10k"/>
@@ -10534,14 +10534,14 @@ Source: http://cache.national.com/ds/LM/LM340.pdf</description>
 <part name="R33" library="rcl" deviceset="R-US_" device="R0603" value="4.7k"/>
 <part name="R34" library="rcl" deviceset="R-US_" device="R0603" value="4.7k"/>
 <part name="R35" library="rcl" deviceset="R-US_" device="R0603" value="4.7k"/>
-<part name="C27" library="rcl" deviceset="C-US" device="C0603" value="0.1uF"/>
-<part name="C26" library="rcl" deviceset="C-US" device="C0603" value="0.1uF"/>
-<part name="C25" library="rcl" deviceset="C-US" device="C0603" value="0.1uF"/>
-<part name="C24" library="rcl" deviceset="C-US" device="C0603" value="0.1uF"/>
-<part name="C23" library="rcl" deviceset="C-US" device="C0603" value="0.1uF"/>
-<part name="C22" library="rcl" deviceset="C-US" device="C0603" value="0.1uF"/>
-<part name="C20" library="rcl" deviceset="C-US" device="C0603" value="0.1uF"/>
-<part name="C21" library="rcl" deviceset="C-US" device="C0603" value="0.1uF"/>
+<part name="C27" library="rcl" deviceset="C-US" device="C0402" value="0.1uF"/>
+<part name="C26" library="rcl" deviceset="C-US" device="C0402" value="0.1uF"/>
+<part name="C25" library="rcl" deviceset="C-US" device="C0402" value="0.1uF"/>
+<part name="C24" library="rcl" deviceset="C-US" device="C0402" value="0.1uF"/>
+<part name="C23" library="rcl" deviceset="C-US" device="C0402" value="0.1uF"/>
+<part name="C22" library="rcl" deviceset="C-US" device="C0402" value="0.1uF"/>
+<part name="C20" library="rcl" deviceset="C-US" device="C0402" value="0.1uF"/>
+<part name="C21" library="rcl" deviceset="C-US" device="C0402" value="0.1uF"/>
 <part name="GND40" library="supply1" deviceset="GND" device=""/>
 <part name="C40" library="rcl" deviceset="C-US" device="C0603" value="0.1uF"/>
 <part name="C39" library="rcl" deviceset="C-US" device="C0603" value="0.1uF"/>
@@ -10663,8 +10663,11 @@ Source: http://cache.national.com/ds/LM/LM340.pdf</description>
 <part name="GND48" library="supply1" deviceset="GND" device=""/>
 <part name="C61" library="rcl" deviceset="C-US" device="C0603" value="10uF"/>
 <part name="IC3" library="linear" deviceset="LM340?-*" device="S" technology="12"/>
-<part name="IMU" library="pinhead" deviceset="PINHD-1X4" device=""/>
 <part name="ENCODER" library="pinhead" deviceset="PINHD-1X4" device=""/>
+<part name="IMU" library="pinhead" deviceset="PINHD-1X4" device=""/>
+<part name="GND49" library="supply1" deviceset="GND" device=""/>
+<part name="C62" library="rcl" deviceset="C-US" device="C0603" value="4.7uF"/>
+<part name="C63" library="rcl" deviceset="C-US" device="C0603" value="1.0uF"/>
 </parts>
 <sheets>
 <sheet>
@@ -10725,12 +10728,14 @@ Source: http://cache.national.com/ds/LM/LM340.pdf</description>
 <instance part="C60" gate="G$1" x="-2.54" y="10.16"/>
 <instance part="IC2" gate="A" x="231.14" y="93.98"/>
 <instance part="SUPPLY16" gate="G$1" x="243.84" y="99.06"/>
-<instance part="SUPPLY17" gate="G$1" x="218.44" y="99.06"/>
-<instance part="GND48" gate="1" x="231.14" y="81.28"/>
+<instance part="SUPPLY17" gate="G$1" x="215.9" y="99.06"/>
+<instance part="GND48" gate="1" x="231.14" y="76.2"/>
 <instance part="C61" gate="G$1" x="165.1" y="-10.16"/>
 <instance part="IC3" gate="A" x="114.3" y="172.72"/>
-<instance part="IMU" gate="A" x="68.58" y="182.88"/>
-<instance part="ENCODER" gate="A" x="68.58" y="162.56"/>
+<instance part="ENCODER" gate="A" x="68.58" y="182.88"/>
+<instance part="IMU" gate="A" x="68.58" y="162.56"/>
+<instance part="C62" gate="G$1" x="215.9" y="91.44"/>
+<instance part="C63" gate="G$1" x="243.84" y="91.44"/>
 </instances>
 <busses>
 </busses>
@@ -10834,8 +10839,8 @@ Source: http://cache.national.com/ds/LM/LM340.pdf</description>
 <wire x1="35.56" y1="175.26" x2="35.56" y2="167.64" width="0.1524" layer="91"/>
 <junction x="27.94" y="175.26"/>
 <wire x1="66.04" y1="167.64" x2="35.56" y2="167.64" width="0.1524" layer="91"/>
-<pinref part="IMU" gate="A" pin="3"/>
-<pinref part="ENCODER" gate="A" pin="1"/>
+<pinref part="ENCODER" gate="A" pin="3"/>
+<pinref part="IMU" gate="A" pin="1"/>
 </segment>
 <segment>
 <pinref part="GND5" gate="1" pin="GND"/>
@@ -10877,6 +10882,14 @@ Source: http://cache.national.com/ds/LM/LM340.pdf</description>
 <pinref part="IC2" gate="A" pin="GND"/>
 <pinref part="GND48" gate="1" pin="GND"/>
 <wire x1="231.14" y1="86.36" x2="231.14" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="C62" gate="G$1" pin="2"/>
+<wire x1="231.14" y1="83.82" x2="231.14" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="215.9" y1="86.36" x2="215.9" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="215.9" y1="83.82" x2="231.14" y2="83.82" width="0.1524" layer="91"/>
+<junction x="231.14" y="83.82"/>
+<pinref part="C63" gate="G$1" pin="2"/>
+<wire x1="243.84" y1="86.36" x2="243.84" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="243.84" y1="83.82" x2="231.14" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="X4" gate="G$1" pin="-"/>
@@ -10981,14 +10994,14 @@ Source: http://cache.national.com/ds/LM/LM340.pdf</description>
 <segment>
 <wire x1="66.04" y1="185.42" x2="15.24" y2="185.42" width="0.1524" layer="91"/>
 <label x="15.24" y="185.42" size="1.778" layer="95" font="vector" rot="R180" xref="yes"/>
-<pinref part="IMU" gate="A" pin="2"/>
+<pinref part="ENCODER" gate="A" pin="2"/>
 </segment>
 </net>
 <net name="BCHANNEL_5V" class="0">
 <segment>
 <wire x1="66.04" y1="180.34" x2="15.24" y2="180.34" width="0.1524" layer="91"/>
 <label x="15.24" y="180.34" size="1.778" layer="95" font="vector" rot="R180" xref="yes"/>
-<pinref part="IMU" gate="A" pin="4"/>
+<pinref part="ENCODER" gate="A" pin="4"/>
 </segment>
 </net>
 <net name="V3P3V" class="0">
@@ -11039,7 +11052,7 @@ Source: http://cache.national.com/ds/LM/LM340.pdf</description>
 <segment>
 <wire x1="66.04" y1="162.56" x2="40.64" y2="162.56" width="0.1524" layer="91"/>
 <label x="40.64" y="162.56" size="1.778" layer="95" font="vector" rot="R180" xref="yes"/>
-<pinref part="ENCODER" gate="A" pin="3"/>
+<pinref part="IMU" gate="A" pin="3"/>
 </segment>
 </net>
 <net name="I2C0_SCL" class="0">
@@ -11050,7 +11063,7 @@ Source: http://cache.national.com/ds/LM/LM340.pdf</description>
 </segment>
 <segment>
 <label x="55.88" y="160.02" size="1.778" layer="95" font="vector" rot="R180" xref="yes"/>
-<pinref part="ENCODER" gate="A" pin="4"/>
+<pinref part="IMU" gate="A" pin="4"/>
 <wire x1="55.88" y1="160.02" x2="66.04" y2="160.02" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -11231,7 +11244,7 @@ Source: http://cache.national.com/ds/LM/LM340.pdf</description>
 <wire x1="45.72" y1="165.1" x2="66.04" y2="165.1" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="172.72" x2="45.72" y2="165.1" width="0.1524" layer="91"/>
 <pinref part="SUPPLY5" gate="G$1" pin="3.3V"/>
-<pinref part="ENCODER" gate="A" pin="2"/>
+<pinref part="IMU" gate="A" pin="2"/>
 </segment>
 <segment>
 <pinref part="SUPPLY2" gate="G$1" pin="3.3V"/>
@@ -11244,6 +11257,8 @@ Source: http://cache.national.com/ds/LM/LM340.pdf</description>
 <pinref part="SUPPLY16" gate="G$1" pin="3.3V"/>
 <wire x1="241.3" y1="93.98" x2="243.84" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="243.84" y1="93.98" x2="243.84" y2="99.06" width="0.1524" layer="91"/>
+<pinref part="C63" gate="G$1" pin="1"/>
+<junction x="243.84" y="93.98"/>
 </segment>
 </net>
 <net name="5V" class="0">
@@ -11299,7 +11314,7 @@ Source: http://cache.national.com/ds/LM/LM340.pdf</description>
 <segment>
 <wire x1="45.72" y1="195.58" x2="45.72" y2="187.96" width="0.1524" layer="91"/>
 <pinref part="SUPPLY10" gate="G$1" pin="5V"/>
-<pinref part="IMU" gate="A" pin="1"/>
+<pinref part="ENCODER" gate="A" pin="1"/>
 <wire x1="45.72" y1="187.96" x2="66.04" y2="187.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -11310,8 +11325,10 @@ Source: http://cache.national.com/ds/LM/LM340.pdf</description>
 <segment>
 <pinref part="IC2" gate="A" pin="VI"/>
 <pinref part="SUPPLY17" gate="G$1" pin="5V"/>
-<wire x1="220.98" y1="93.98" x2="218.44" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="218.44" y1="93.98" x2="218.44" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="93.98" x2="215.9" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="215.9" y1="93.98" x2="215.9" y2="99.06" width="0.1524" layer="91"/>
+<pinref part="C62" gate="G$1" pin="1"/>
+<junction x="215.9" y="93.98"/>
 </segment>
 </net>
 <net name="NSS_JOULE" class="0">
@@ -11396,6 +11413,7 @@ Source: http://cache.national.com/ds/LM/LM340.pdf</description>
 </nets>
 </sheet>
 <sheet>
+<description>USB Hub</description>
 <plain>
 </plain>
 <instances>
@@ -12398,33 +12416,39 @@ Source: http://cache.national.com/ds/LM/LM340.pdf</description>
 </net>
 <net name="N$26" class="0">
 <segment>
-<pinref part="U4" gate="G$1" pin="USB_SSTXM_DN4"/>
-<wire x1="-88.9" y1="-5.08" x2="-60.96" y2="-5.08" width="0.1524" layer="91"/>
 <wire x1="-60.96" y1="-5.08" x2="-60.96" y2="-2.54" width="0.1524" layer="91"/>
 <wire x1="-60.96" y1="-2.54" x2="-53.34" y2="-2.54" width="0.1524" layer="91"/>
 <wire x1="-53.34" y1="-2.54" x2="-53.34" y2="-10.16" width="0.1524" layer="91"/>
 <pinref part="C27" gate="G$1" pin="1"/>
 <wire x1="-53.34" y1="-10.16" x2="-48.26" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="-60.96" y1="-5.08" x2="-83.82" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="-5.08" x2="-83.82" y2="-2.54" width="0.1524" layer="91"/>
+<pinref part="U4" gate="G$1" pin="USB_SSTXP_DN4"/>
+<wire x1="-83.82" y1="-2.54" x2="-88.9" y2="-2.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$27" class="0">
 <segment>
-<pinref part="U4" gate="G$1" pin="USB_SSTXP_DN4"/>
-<wire x1="-88.9" y1="-2.54" x2="-63.5" y2="-2.54" width="0.1524" layer="91"/>
 <wire x1="-63.5" y1="-2.54" x2="-63.5" y2="0" width="0.1524" layer="91"/>
 <pinref part="C26" gate="G$1" pin="1"/>
 <wire x1="-63.5" y1="0" x2="-48.26" y2="0" width="0.1524" layer="91"/>
+<wire x1="-63.5" y1="-2.54" x2="-81.28" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="-81.28" y1="-2.54" x2="-81.28" y2="-5.08" width="0.1524" layer="91"/>
+<pinref part="U4" gate="G$1" pin="USB_SSTXM_DN4"/>
+<wire x1="-81.28" y1="-5.08" x2="-88.9" y2="-5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$28" class="0">
 <segment>
-<pinref part="U4" gate="G$1" pin="USB_SSTXM_DN3"/>
-<wire x1="-88.9" y1="20.32" x2="-63.5" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="-63.5" y1="20.32" x2="-63.5" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="-63.5" y1="22.86" x2="-53.34" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="-53.34" y1="22.86" x2="-53.34" y2="15.24" width="0.1524" layer="91"/>
 <pinref part="C25" gate="G$1" pin="1"/>
 <wire x1="-53.34" y1="15.24" x2="-48.26" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="-63.5" y1="20.32" x2="-83.82" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="20.32" x2="-83.82" y2="22.86" width="0.1524" layer="91"/>
+<pinref part="U4" gate="G$1" pin="USB_SSTXP_DN3"/>
+<wire x1="-83.82" y1="22.86" x2="-88.9" y2="22.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$29" class="0">
@@ -12432,19 +12456,23 @@ Source: http://cache.national.com/ds/LM/LM340.pdf</description>
 <pinref part="C24" gate="G$1" pin="1"/>
 <wire x1="-48.26" y1="25.4" x2="-66.04" y2="25.4" width="0.1524" layer="91"/>
 <wire x1="-66.04" y1="25.4" x2="-66.04" y2="22.86" width="0.1524" layer="91"/>
-<pinref part="U4" gate="G$1" pin="USB_SSTXP_DN3"/>
-<wire x1="-66.04" y1="22.86" x2="-88.9" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="-66.04" y1="22.86" x2="-81.28" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="-81.28" y1="22.86" x2="-81.28" y2="20.32" width="0.1524" layer="91"/>
+<pinref part="U4" gate="G$1" pin="USB_SSTXM_DN3"/>
+<wire x1="-81.28" y1="20.32" x2="-88.9" y2="20.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$30" class="0">
 <segment>
-<pinref part="U4" gate="G$1" pin="USB_SSTXM_DN2"/>
-<wire x1="-88.9" y1="45.72" x2="-66.04" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="-66.04" y1="45.72" x2="-66.04" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="-66.04" y1="48.26" x2="-53.34" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="-53.34" y1="48.26" x2="-53.34" y2="40.64" width="0.1524" layer="91"/>
 <pinref part="C23" gate="G$1" pin="1"/>
 <wire x1="-53.34" y1="40.64" x2="-48.26" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="-66.04" y1="45.72" x2="-83.82" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="45.72" x2="-83.82" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="U4" gate="G$1" pin="USB_SSTXP_DN2"/>
+<wire x1="-83.82" y1="48.26" x2="-88.9" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$31" class="0">
@@ -12452,8 +12480,10 @@ Source: http://cache.national.com/ds/LM/LM340.pdf</description>
 <pinref part="C22" gate="G$1" pin="1"/>
 <wire x1="-48.26" y1="50.8" x2="-68.58" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="-68.58" y1="50.8" x2="-68.58" y2="48.26" width="0.1524" layer="91"/>
-<pinref part="U4" gate="G$1" pin="USB_SSTXP_DN2"/>
-<wire x1="-68.58" y1="48.26" x2="-88.9" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="-68.58" y1="48.26" x2="-81.28" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="-81.28" y1="48.26" x2="-81.28" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="U4" gate="G$1" pin="USB_SSTXM_DN2"/>
+<wire x1="-81.28" y1="45.72" x2="-88.9" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$32" class="0">
@@ -12463,17 +12493,21 @@ Source: http://cache.national.com/ds/LM/LM340.pdf</description>
 <wire x1="-53.34" y1="66.04" x2="-53.34" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="-53.34" y1="73.66" x2="-66.04" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="-66.04" y1="73.66" x2="-66.04" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="U4" gate="G$1" pin="USB_SSTXM_DN1"/>
-<wire x1="-66.04" y1="71.12" x2="-88.9" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="-66.04" y1="71.12" x2="-83.82" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="71.12" x2="-83.82" y2="73.66" width="0.1524" layer="91"/>
+<pinref part="U4" gate="G$1" pin="USB_SSTXP_DN1"/>
+<wire x1="-83.82" y1="73.66" x2="-88.9" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$33" class="0">
 <segment>
-<pinref part="U4" gate="G$1" pin="USB_SSTXP_DN1"/>
-<wire x1="-88.9" y1="73.66" x2="-68.58" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="-68.58" y1="73.66" x2="-68.58" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="C20" gate="G$1" pin="1"/>
 <wire x1="-68.58" y1="76.2" x2="-48.26" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="-68.58" y1="73.66" x2="-81.28" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="-81.28" y1="73.66" x2="-81.28" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="U4" gate="G$1" pin="USB_SSTXM_DN1"/>
+<wire x1="-81.28" y1="71.12" x2="-88.9" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="USB_SSTXP_DN1" class="0">
@@ -13034,6 +13068,7 @@ Source: http://cache.national.com/ds/LM/LM340.pdf</description>
 <instance part="SUPPLY8" gate="G$1" x="78.74" y="68.58"/>
 <instance part="SUPPLY15" gate="G$1" x="-40.64" y="25.4"/>
 <instance part="GND47" gate="1" x="-40.64" y="-27.94"/>
+<instance part="GND49" gate="1" x="-12.7" y="48.26"/>
 </instances>
 <busses>
 </busses>
@@ -13135,6 +13170,12 @@ Source: http://cache.national.com/ds/LM/LM340.pdf</description>
 <wire x1="-40.64" y1="-25.4" x2="-40.64" y2="-20.32" width="0.1524" layer="91"/>
 <pinref part="U8" gate="G$1" pin="GND"/>
 <wire x1="-40.64" y1="-20.32" x2="-38.1" y2="-20.32" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U3" gate="G$1" pin="RESET"/>
+<pinref part="GND49" gate="1" pin="GND"/>
+<wire x1="-10.16" y1="53.34" x2="-12.7" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="-12.7" y1="53.34" x2="-12.7" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC" class="0">
